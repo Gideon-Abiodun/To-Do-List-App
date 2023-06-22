@@ -1,3 +1,23 @@
+// Dashboard
+
+let arrow = document.querySelectorAll(".arrow")[0];
+let slider = document.querySelectorAll(".slider")[0];
+arrow.addEventListener("click", ()=>{
+    slider.classList.toggle("close");
+});
+
+let toggleBtn = document.querySelectorAll(".checkbox")[0];
+let body = document.querySelectorAll(".main-body")[0];
+let search = document.querySelectorAll(".search")[0];
+toggleBtn.addEventListener("click", ()=>{
+    body.classList.toggle("dark");
+    slider.classList.toggle("middark");
+    slider.classList.toggle("color");
+    search.classList.toggle("searchcolor");
+});
+
+// Todo List function 
+
 window.addEventListener("load", () => {
   const form = document.querySelector("#task-form");
   const input = document.querySelector("#task-input");
@@ -32,7 +52,7 @@ window.addEventListener("load", () => {
     taskDiv.appendChild(taskActionsDiv);
 
     const taskEditBotton = document.createElement("button");
-    taskEditBotton.innerHTML = "Edit";
+    taskEditBotton.innerHTML = 'Edit';
 
     const taskDeleteButton = document.createElement("button");
     taskDeleteButton.innerHTML = "Delete";

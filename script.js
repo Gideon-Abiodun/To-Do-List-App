@@ -16,6 +16,8 @@ toggleBtn.addEventListener("click", ()=>{
     search.classList.toggle("searchcolor");
 });
 
+
+
 // Todo List function 
 
 window.addEventListener("load", () => {
@@ -37,28 +39,39 @@ window.addEventListener("load", () => {
     }
 
     const taskDiv = document.createElement("div");
+    taskDiv.classList.add("task");
     list.appendChild(taskDiv);
 
     const taskContentDiv = document.createElement("div");
+    taskContentDiv.classList.add("content");
     taskDiv.appendChild(taskContentDiv);
 
     const taskInput = document.createElement("input");
+    taskInput.classList.add("text");
     taskInput.type = "text";
     taskInput.value = task;
     taskInput.setAttribute("readonly", "readonly");
     taskContentDiv.appendChild(taskInput);
 
     const taskActionsDiv = document.createElement("div");
+    taskActionsDiv.classList.add("actions");
     taskDiv.appendChild(taskActionsDiv);
 
+    // var editIcon = document.createElement("i");
+    // editIcon.classList.add("fas", "fa-edit");
+    // editIcon.addEventListener("click", function () {
+    //   editTask(index);
+    // });
+
     const taskEditBotton = document.createElement("button");
-    taskEditBotton.innerHTML = 'Edit';
+    taskEditBotton.innerHTML = "🖍";
 
     const taskDeleteButton = document.createElement("button");
-    taskDeleteButton.innerHTML = "Delete";
+    taskDeleteButton.classList.add("Delete");
+    taskDeleteButton.innerHTML = '<i class="bi bi-trash"></i>';
 
     const taskCompletedButton = document.createElement("button");
-    taskCompletedButton.innerHTML = "Completed";
+    taskCompletedButton.innerHTML = "✔";
 
     // const taskUncheckedButton = document.createElement("button");
     // taskUncheckedButton.innerHTML = "Uncompleted"
@@ -69,25 +82,27 @@ window.addEventListener("load", () => {
     // taskActionsDiv.appendChild(taskUncheckedButton);
 
     taskEditBotton.addEventListener("click", () => {
-      if (taskEditBotton.innerText.toLowerCase() == "edit") {
+      if (taskEditBotton.innerText.toLowerCase() === "🖍") {
         taskInput.removeAttribute("readonly");
         taskInput.focus();
-        taskEditBotton.innerText = "Update";
+        taskEditBotton.innerText = "✔";
         // taskInput.style.textDecoration = "none";
       } else {
         taskInput.setAttribute("readonly", "readonly");
-        taskEditBotton.innerText = "Edit";
+        taskEditBotton.innerText = "🖍";
       }
     });
 
     taskCompletedButton.addEventListener("click", () => {
-      if (taskCompletedButton.innerText.toLowerCase() == "completed") {
+      if (taskCompletedButton.innerText.toLowerCase() === "✔") {
         taskInput.setAttribute("readonly", "readonly");
-        taskCompletedButton.innerText = "Uncompleted";
+        taskCompletedButton.innerText = "❌";
         taskInput.style.textDecoration = "line-through";
+        taskInput.style.color = "red"
       } else {
-        taskCompletedButton.innerText = "Completed";
+        taskCompletedButton.innerText = "✔";
         taskInput.style.textDecoration = "none";
+        taskInput.style.color = "#afafaf"
       }
     });
 

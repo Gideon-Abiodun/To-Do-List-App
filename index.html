@@ -62,22 +62,24 @@
           </div>
       </div>
       <div class="container">
-        <header>
-          <h1>Todo-List</h1>
+        
+          <h1 class="task-tittle"><i class="bi bi-house-door"></i>Tasks</h1>
           <form action="" id="task-form">
             <input
               type="text"
               id="task-input"
-              placeholder="What are your tasks for today?"
+              placeholder="+ Add a task" autocomplete="none"
             />
-            <input type="submit" id="task-submit" value="Add" />
+            <button id="task-submit" ><i class="bi bi-plus-circle"></i></button>
+            <!-- <input type="submit" value="" /> -->
+            
           </form>
-        </header>
-        <main>
+       
+        
           <section class="task-list">
             <div id="tasks"></div>
           </section>
-        </main>
+        
       </div>
   </div>
 

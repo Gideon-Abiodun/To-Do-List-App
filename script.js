@@ -16,8 +16,6 @@ toggleBtn.addEventListener("click", ()=>{
     search.classList.toggle("searchcolor");
 });
 
-
-
 // Todo List function 
 
 window.addEventListener("load", () => {
@@ -82,25 +80,31 @@ window.addEventListener("load", () => {
     // taskActionsDiv.appendChild(taskUncheckedButton);
 
     taskEditBotton.addEventListener("click", () => {
-      if (taskEditBotton.innerText.toLowerCase() === "🖍") {
+      if (taskEditBotton.innerText === "🖍") {
         taskInput.removeAttribute("readonly");
+        taskCompletedButton.disabled = true;
         taskInput.focus();
         taskEditBotton.innerText = "✔";
-        // taskInput.style.textDecoration = "none";
+        taskInput.style.textDecoration = "none";
       } else {
         taskInput.setAttribute("readonly", "readonly");
+        taskCompletedButton.disabled = false;
         taskEditBotton.innerText = "🖍";
+        taskInput.style.textDecoration = "none";
       }
     });
 
     taskCompletedButton.addEventListener("click", () => {
-      if (taskCompletedButton.innerText.toLowerCase() === "✔") {
+      if (taskCompletedButton.innerText === "✔") {
         taskInput.setAttribute("readonly", "readonly");
+        // taskInput.setAttribute("disabled", true);
         taskCompletedButton.innerText = "❌";
         taskInput.style.textDecoration = "line-through";
-        taskInput.style.color = "red"
+        taskInput.style.color = "crimson";
+        // alert("hello")
       } else {
         taskCompletedButton.innerText = "✔";
+        // taskInput.setAttribute("disabled", false);
         taskInput.style.textDecoration = "none";
         taskInput.style.color = "#afafaf"
       }
@@ -112,18 +116,18 @@ window.addEventListener("load", () => {
       }
     });
 
-    // taskCompletedButton.addEventListener("click", () => {
-    //   taskInput.style.textDecoration = "line-through";
-    //   taskInput.setAttribute("readonly", "readonly");
-    // });
-
-    // taskUncheckedButton.addEventListener("click", () =>{
-    //   taskInput.style.textDecoration = "";
-    //   taskInput.removeAttribute("readonly");
-    // })
-
     // empty the field after "add button"
-
+    
     input.value = "";
   });
 });
+
+// taskCompletedButton.addEventListener("click", () => {
+//   taskInput.style.textDecoration = "line-through";
+//   taskInput.setAttribute("readonly", "readonly");
+// });
+
+// taskUncheckedButton.addEventListener("click", () =>{
+//   taskInput.style.textDecoration = "";
+//   taskInput.removeAttribute("readonly");
+// })

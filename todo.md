@@ -1,0 +1,5 @@
+- use unique id
+- change arrow to slideToggler 
+- fix darkmode/light mode (done)
+- fix edit/complete function (done)
+- check input attributes using coditionals (done)

@@ -7,6 +7,10 @@
     font-family: sans-serif;
 }
 
+sup{
+    color: red;
+}
+
 /* .main-body {
     height: 100vh;
     display: grid;
@@ -399,6 +403,9 @@ input[type="search"] {
     /* background-color: red; */
 }
 
+#tasks::-webkit-scrollbar {
+    display: none;
+}
 
 #tasks .task{
     display: flex;

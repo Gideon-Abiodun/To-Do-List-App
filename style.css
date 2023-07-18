@@ -5,6 +5,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: sans-serif;
+    text-decoration: none;
 }
 
 sup{
@@ -140,7 +141,7 @@ body {
     cursor: pointer;
     /* padding-left: .5rem; */
     font-size: 1.1rem;
-    margin-top: 11rem;
+    margin-top: 10rem;
 }
 
 .childs {
@@ -193,9 +194,9 @@ input[type="search"] {
     display: none;
 }
 
-#home-icon {
+/* #home-icon {
     padding: .6rem;
-}
+} */
 
 .checkbox {
     appearance: none;
@@ -307,8 +308,6 @@ input[type="search"] {
 .slider.close .profile {
     padding-left: .5rem;
 }
-
-
 
 
 
@@ -456,3 +455,9 @@ input[type="search"] {
 .task .actions .Delete{
     color: rgb(194, 40, 40);
 }
+
+.note {
+    color: #000;
+}
+
+

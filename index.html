@@ -6,88 +6,103 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ToDo-List</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
-    <script src="https://kit.fontawesome.com/64d58efce2.js"crossorigin="anonymous"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/64d58efce2.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
-
     <!-- Dashboard -->
     <div class="main-body">
       <div class="slider close">
-          <div class="profile">
-              <div class="profile-text">
-              <img class="image" src="./images/Gideon (3).jpg" alt="">
-                  <div class="maintext text">
-                      <h4>Gideon Abiodun</h4>
-                      <p class="mail">gideonabiodun02@gmail.com</p>
-                  </div>
-              </div>
-              <div class="arrow">
-                  <i class="fas fa-chevron-left arrow-icon"></i>
-              </div>
-              <div class="links">
-                  <div class="search">
-                      <i class="bi bi-search searchIcon"></i> <input type="search" class="searchbtn search" placeholder="search">
-                  </div>
-                  <div class="my-day childs">
-                    <i class="fas fa-sun icons"></i> <p class="text">My Day</p>
-                  </div>
+        <div class="profile">
+          <div class="profile-text">
+            <img class="image" src="./images/Gideon (3).jpg" alt="" />
+            <div class="maintext text">
+              <h4>Gideon Abiodun</h4>
+              <p class="mail">gideonabiodun02@gmail.com</p>
+            </div>
+          </div>
+          <div class="arrow">
+            <i class="fas fa-chevron-left arrow-icon"></i>
+          </div>
+          <div class="links">
+            <div class="search">
+              <i class="bi bi-search searchIcon"></i>
+              <input
+                type="search"
+                class="searchbtn search"
+                placeholder="search"
+              />
+            </div>
+            <div class="my-day childs">
+              <i class="fas fa-sun icons"></i>
+              <p class="text">My Day</p>
+            </div>
 
-                  <div class="important childs">
-                    <i class="fas fa-star icons"></i><p class="text">Important</p>
-                  </div>
+            <div class="important childs">
+              <i class="fas fa-star icons"></i>
+              <p class="text">Important</p>
+            </div>
 
-                  <div class="planned childs">
-                    <i class="fas fa-calendar icons"></i><p class="text">Planned</p>
-                  </div>
+            <div class="planned childs">
+              <i class="fas fa-calendar icons"></i>
+              <p class="text">Planned</p>
+            </div>
 
-                  <div class="assigned childs">
-                    <i class="fas fa-user icons"></i><p class="text">Assigned to me <sup>*</sup></p>
-                  </div>
+            <div class="assigned childs">
+              <i class="fas fa-user icons"></i>
+              <p class="text">Assigned to me <sup>*</sup></p>
+            </div>
 
-                  <div class="tasks childs" id="home-icon">
-                    <i class="fas fa-home icons"></i><p class="text">Tasks</p>
-                  </div>
+            <div class="tasks childs" id="home-icon">
+              <i class="fas fa-home icons"></i>
+              <p class="text">Tasks</p>
+            </div>
 
-                  <div class="tasks childs">
-                    <i class="fas fa-book icons"></i><p class="text"><a class="childs note" href="./pages/notes.html">My Note</a></p>
-                  </div>
-                  <!-- <hr> -->
+            <div class="tasks childs">
+              <i class="fas fa-book icons"></i>
+              <p class="text">
+                <a class="childs note" href="./pages/notes.html">My Note</a>
+              </p>
+            </div>
+            <!-- <hr> -->
 
-                  <!-- <div class="logout childs">
+            <!-- <div class="logout childs">
                       <i class="bi bi-box-arrow-right icons"></i><p class="text">Log Out</p>
                   </div> -->
-                  
-                  <div class="toggle">
-                      <input type="checkbox" class="checkbox">
-                      <p class="text" id="toggleText">Dark Mode</p>
-                  </div>
-              </div>
+
+            <div class="toggle">
+              <input type="checkbox" class="checkbox" />
+              <p class="text" id="toggleText">Dark Mode</p>
+            </div>
           </div>
+        </div>
       </div>
       <div class="container">
-        
-          <h1 class="task-tittle"><i class="bi bi-house-door"></i>Tasks</h1>
-          <form action="" id="task-form">
-            <input
-              type="text"
-              id="task-input"
-              placeholder="+ Add a task" autocomplete="none"
-            />
-            <button id="task-submit" ><i class="bi bi-plus-circle"></i></button>
-            <!-- <input type="submit" value="" /> -->
-            
-          </form>
-       
-        
-          <section class="task-list">
-            <div id="tasks"></div>
-          </section>
-        
-      </div>
-  </div>
+        <h1 class="task-tittle"><i class="bi bi-house-door"></i>Tasks</h1>
+        <form action="" id="task-form">
+          <input
+            type="text"
+            id="task-input"
+            placeholder="+ Add a task"
+            autocomplete="none"
+          />
+          <button id="task-submit"><i class="bi bi-plus-circle"></i></button>
+          <!-- <input type="submit" value="" /> -->
+        </form>
 
-   <!-- Tasks List and functionality! -->
+        <section class="task-list">
+          <div id="tasks"></div>
+        </section>
+      </div>
+    </div>
+
+    <!-- Tasks List and functionality! -->
 
     <!-- <h1>To Do List</h1>
         <ul id="tasks"></ul>

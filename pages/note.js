@@ -10,7 +10,8 @@ showNotes();
 function updateStorage() {
   localStorage.setItem("notes", noteContainer.innerHTML);
 }
-// localStorage.clear("note");
+
+localStorage.clear("note"); 
 
 // function to add
 
